@@ -1,4 +1,5 @@
-  body  {
+ /*-- BODY ---- */
+ body  {
         height:100%;
         width: 100%;
         background: url("../img/background.jpg") center top  fixed;
@@ -18,11 +19,47 @@
         z-index: -1;   
   }
 
+  .header {
+    overflow: hidden;
+    background-color: #ffffff85;
+    padding: 1px 1px;
+  }
+  
+  .header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 5px;
+  }
+  
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .header a:hover {
+    background-color: #ff8c0010;
+  }
+  
+  .header a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+  
+  .header-right {
+    float: right;
+  }
+  
+
+/*-- LOGIN_BOX ---- */
   .container_box {
     display: flex;
     justify-content: center;
-    align-items: center;
-
+    align-items: center;   
   }
 
   .box {
@@ -36,12 +73,13 @@
         padding: 12px 15px 58px 31px;
         border-radius: 4px;
         background-color: white;
+        cursor:default;
   }
 
   img.LogoAplication {
     width: 299px;
     height: 110px;
-    margin-top: 80px;
+    margin-top: 50px;
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
@@ -55,7 +93,7 @@
   .Seja_Bem_Vindo {
     width: auto;
     height: auto;
-    margin-top: 190px;
+    margin-top: 165px;
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
@@ -64,19 +102,19 @@
     right: 0;
     position: absolute;
     font-family:"Oxygen", sans-serif;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 70;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.06;
     letter-spacing: -0.27px;
     text-align: center;
-    color: orange;
+    color: #ff8b00;
   }
 
   .input_label{
     padding:40px;
-    margin-top: 220px;
+    margin-top: 200px;
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
@@ -138,5 +176,48 @@ label {
 .form-control {
     box-shadow: none !important;
 }
+/* CHECKBOX PERSONALISADO */
+.container_check {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Oxygen", sans-serif";
+}
+
+/* Hide the browser's default radio button */
+.container_check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #ff8b00;
+  border-radius: 50%;
+}
+
+.container_check:hover input ~ .checkmark {
+  background-color: rgb(255, 255, 255);
+}
+
+.container_check input:checked ~ .checkmark {
+  border: 5px solid #ff8b00;
+  border-radius: 50%;
+}
+
 
 
