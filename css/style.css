@@ -21,7 +21,7 @@
 
   .header {
     overflow: hidden;
-    background-color: #ffffff85;
+    background-color: #ffffffb6;
     padding: 1px 1px;
   }
   
@@ -60,6 +60,7 @@
     display: flex;
     justify-content: center;
     align-items: center;   
+    flex-direction: column;
   }
 
   .box {
@@ -69,7 +70,7 @@
         transform: translate(-50%, -50%);
         margin: 0 336px 104px 0;
         width: 508px;
-        height: 508px;
+        height: 568px;
         padding: 12px 15px 58px 31px;
         border-radius: 4px;
         background-color: white;
@@ -157,25 +158,45 @@ label {
     height: 45px;
 }
 
-.input_label button[type="submit"] {
-    background: #ff8b00;
-    border: 0;
-    padding: 10px 30px;
-    color: #ffff;
-    transition: 0.4s;
-    border-radius: 10px;
-    width: 100%;
-    cursor: pointer;
-    font-size: 18px;
-  }
-.input_label button[type="submit"]:hover {
-    background: #ffff;
-    color: #ff8b00;
-    border: 1px solid #ff8b00;
-  }
 .form-control {
     box-shadow: none !important;
 }
+
+/* SUBIMIT ESQUECEU E LEMBRAR DE MIM */
+.submit_label{
+  padding:40px;
+  margin-top: 350px;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  
+}
+.submit_label button[type="submit"] {
+  background: #ff8b00;
+  border: 0;
+  padding: 10px 30px;
+  color: #ffff;
+  transition: 0.4s;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 50px;
+}
+.submit_label button[type="submit"]:hover {
+  background: #ffff;
+  color: #ff8b00;
+  border: 1px solid #ff8b00;
+}
+
+
+
 /* CHECKBOX PERSONALISADO */
 .container_check {
   display: block;
@@ -219,5 +240,50 @@ label {
   border-radius: 50%;
 }
 
+div.check {
+  float:left;
+  font-size: 3vw;
+  text-align: center;
+  cursor: default;
+}
 
+div.help {
+
+  float:right;
+  margin-right: 0vw;
+  font-size: 3vw;
+  text-align: center;
+  float:right;
+}
+div a{
+  color: #ff8b00;
+}
+div a :focus{
+  color: #ff8b00;
+}
+div a:hover{
+  color: gray;
+}
+.clean{clear:both;}
+
+footer {
+  text-align: center;
+  padding: 1px;
+  background-color: #ff8b00;
+  color: white;
+  position: fixed;
+  left: 0px;
+  bottom: 0;
+  width: 100%;
+  white-space: inherit;
+}
+footer p{
+  margin-top: 10px;
+}
+footer a{
+  color:#ff8b00;
+  background-color: #fff;
+  border-radius: 15px;
+  text-size-adjust: 5px;
+}
 
