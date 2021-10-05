@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>Triad Systems</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="" name="keywords">
+<meta content="" name="description">
+
+<!-- Favicons -->
+<link href="../img/icon.ico" rel="icon">
+<link href="../img/icon.ico" rel="icon_apple">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700|Rubik|Oxygen" rel="stylesheet">
+
+<!-- scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<script src="../js/scripts.js"></script>
+
+<!-- Bootstrap-->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Libraries CSS Files -->
+<link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="../lib/animate/animate.min.css" rel="stylesheet">
+<link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+<link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+<!-- Main Stylesheet File -->
+<link href="../css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header">
+            <a href="#" class="logo"><img src="../img/logo.png" alt="" width="130" height="55"/>
+            <div class="header-right">
+            </div>
+          </div>
+    </header>
+
+
+    <main>
+        <div class="container_box">
+            <div class="box">
+                <img src="../img/logo.png"
+                    srcset="img/logo.png 2x,
+                    img/logo.png 3x"
+                
+                    class="LogoAplication">
+                        <span class="Seja_Bem_Vindo">
+                            Triad Portal - Clientes
+                        </span>
+    
+                    <div class="input_label">
+                        <form action="../php/Login.php" method="GET">         
+                            <div class="textOnInput">
+                                <label for="inputText">E-mail</label>
+                                <input id="e-mail" name="e-mail" class="form-control" type="email" placeholder="Digite seu e-mail"><br><br>
+                                
+                                
+                                <!--<input id="telefone_numero" name="telefone_numero" class="form-control" type="text" placeholder="(11) 987654-3210"><br><br>                       
+                                <script type="text/javascript">
+                                    $("#telefone_numero").mask("(00) 00000-0000");
+                                </script> -->
+                            </div>
+    
+                            <div class="textOnInput">
+                                <label for="inputText">Senha</label>
+                                <input class="form-control" id="password" type="password" placeholder="Informe sua senha"><br>
+                                <i onclick="showPassword()" id="show" class="show ion-eye"></i>                               
+                            </div>
+                        </form> 
+                    </div>
+                    
+                    <form action="home.html">
+
+                        <div class="submit_label">
+                            <div class="conteiner_checkbox">
+                                <div class="col-md-12"></div>
+                                
+                                <div class="check">
+                                    <div class="conteiner_checkbox">
+                                        <label class="container_check">Lembrar de mim 
+                                            <input type="checkbox" id="lembrar_de_mim" name="lembrar_de_mim">
+                                            <span class="checkmark"></span>
+                                        </label>                 
+                                    </div>
+                                </div>
+                                <div class="help">
+                                    <li class="container_check"> <a onclick="togglePopup()">Ajuda no acesso</a> </li>
+                                </div>
+                                <div class="clean"></div>
+                            </div>
+                            <button type="submit">Login</button>
+                        </div>
+
+
+
+                    </form>
+ 
+
+            </div>
+          </div>
+
+          <div class="popup" id="popup-1">
+              <div class="overlay"></div>
+              <div class="content">
+                <h1>Triad Portal - Suporte</h1>
+                <hr>
+                <p>Caso esteja com problemas para acessar sua conta, envie um e-mail com o seu usuario p/ suporte@triadsystems.com.br</p>
+                <hr>
+                <div class="close-btn" onclick="togglePopup()">OK</div>
+              </div>
+          </div>
+    </main>
+
+    <footer>
+        <p>TRIAD Systems - Unidades: São Paulo, Rio de Janeiro, Manaus e Indaiatuba.</br>
+        Copyright 2021 - Todos os direitos reservados </br>
+        <!--<a href="https://www.triadsystems.com.br/">www.triadsystems.com.br</a> -- ></p> -->
+      </footer>
+</body>
+</html>

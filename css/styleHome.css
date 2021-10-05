@@ -2,7 +2,8 @@
  body  {
         height:100%;
         width: 100%;
-        background: url("../img/background.jpg") center top  fixed;
+        /*background: url("../img/background.jpg") center top  fixed;*/
+        background: rgba(240, 103, 103, 0.514);
         background-size:cover;
         color: #000;
         font-family: "Open Sans", sans-serif;
