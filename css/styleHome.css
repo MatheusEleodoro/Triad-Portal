@@ -3,7 +3,7 @@
         height:100%;
         width: 100%;
         /*background: url("../img/background.jpg") center top  fixed;*/
-        background: rgba(240, 103, 103, 0.514);
+        background: rgba(0, 0, 0, 0.514);
         background-size:cover;
         color: #000;
         font-family: "Open Sans", sans-serif;
@@ -24,6 +24,10 @@
     overflow: hidden;
     background-color: #ffffffb6;
     padding: 1px 1px;
+  }
+ 
+  .header .logo{
+    margin-left: 10%;;
   }
   
   .header a {
