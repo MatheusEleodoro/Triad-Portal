@@ -18,7 +18,9 @@
         position: absolute;
         z-index: -1;   
   }
-
+  .header .logo{
+    margin-left: 10%;;
+  }
   .header {
     overflow: hidden;
     background-color: #ffffffb6;
