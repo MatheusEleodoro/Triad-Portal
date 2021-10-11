@@ -1,4 +1,16 @@
 
+new WOW().init(); //Inicializando a WON
+
+ // Preloader
+ $(window).on('load', function () {
+  if ($('#preloader').length) {
+    $('#preloader').delay(100).fadeOut('slow', function () {
+      $(this).remove();
+    });
+  }
+});
+
+
 function togglePopup(){
     document.getElementById("popup-1").classList.toggle("active");
 }

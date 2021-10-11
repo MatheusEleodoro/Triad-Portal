@@ -7,6 +7,7 @@
 <meta content="" name="keywords">
 <meta content="" name="description">
 
+
 <!-- Favicons -->
 <link href="../img/icon.ico" rel="icon">
 <link href="../img/icon.ico" rel="icon_apple">
@@ -14,19 +15,23 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700|Rubik|Oxygen" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
 <!-- scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
-<script src="../js/scripts.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="../lib/wow/wow.min.js"></script>
+
+<script src="../js/main.js"></script>
+<script src="../js/graficos.js"></script>
 
 <!-- Bootstrap-->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
 <!-- Libraries CSS Files -->
 <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 <link href="../lib/animate/animate.min.css" rel="stylesheet">
 <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
 <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
 <!-- Main Stylesheet File -->
 <link href="../css/styleHome.css" rel="stylesheet">
 
@@ -36,8 +41,9 @@
 <body>
 
     <header>
-            <div class="header" alt="" width="100%">
-                <div class="head-container">
+            <div id="header"class="header" alt="" width="100%">
+
+                <div id="header-container"class="container-fluid">
                     <i class="icon-menu ion-navicon"></i>
                     <div class="logos">
                         <a href="#" class="logo"><img src="../img/logo.png" alt="" width="130" height="55" />  </a>
@@ -84,59 +90,95 @@
                         <div class="user-area">
                             <div class="user-profile">
                                 <img class="avatar"src="https://github.com/MatheusEleodoro/packageIcon/blob/main/ic/ic_scope.png?raw=true" alt="avatar"></img>
-                                <button>
-                                    <p> @eleodoro.dev
-                                    </p>
-                                </button>
+
+                                <div class="dropdown">
+                                    <button class="dropbtn">@eleodoro.dev</button>
+                                    <div class="dropdown-content">
+                                      <a href="#">Link 1</a>
+                                      <a href="#">Link 2</a>
+                                      <a href="#">Link 3</a>
+                                    </div>
+                                  </div>
+
                                 <buttom>
                                     <i class="ion-chevron-down" onclick=""></i>
                                 </buttom>            
                             </div>
                         </div>
                     </div>
+
                 </div>
-        </div>
+ 
+            </div>
+
+
             <div id= "header-expand" class="header-expand" alt="" width="100%" style="display: none">
                 <button class="pages-button">
                     <p>Home Screen
                         <i class="ion-close-circled"></i>
-                    </p>    
+                    </p>
                 <button>
             </div>
-        </div>
+
     </header>
-   
 
 
-    <!--
+    <section id="dashboard" >
 
-    <dashboard>
-        <main class="cards">
-        
-        
-            <section class="card">
-                <h1>Nome do dashboard</h1>
-            </section>  
-    
-            <section class="card">
-                <div class="title">
-                    <h1>Nome do dashboard</h1>
+        <div class="box-container">
+
+
+            <div class="row justify-content-center box-row">
+                <div class="col-md-4 col-sm-10 wow fadeInLeft">
+                   <div class="box">
+                        <header class="title"> Nome do dashboard <i class="more-icon ion-android-more-vertical"></i></header>
+                        <div class="box-content">
+                            <div id="donutchart" style="height: 400px;"></div>
+                        </div>
+                   </div>
                 </div>
-                
-            </section>
-    
-            <section class="card">
-                <h1>Nome do dashboard</h1>
-            </section>
-        </main>
-    </dashboard>
+            
+                <div class="col-md-4 col-sm-10 box-col wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="box">
+                        <header class="title"> Nome do dashboard <i class="more-icon ion-android-more-vertical"></i></header>
+                        <div class="box-content">
+                            <div id="chart_bar" style="height: 400px; padding: 30px;"></div>
+                        </div>
+                    </div>
+                 </div>
+            
+                <div class="col-md-3 col-sm-10 box-col wow fadeInRight"data-wow-delay="0.3s">
+                    <div class="box-fav">
+                        <header class="title-fav"> Nome do dashboard <i class="more-icon ion-android-more-vertical"></i></header>
+                    </div>
+                 </div>
 
-    -->
+            </div>
 
-   
-   
-   
-   
+            <div class="row justify-content-around box-row wow fadeInUp"data-wow-delay="0.4s">
+                <div class="col-md-5 col-sm-10">
+                   <div class="box">
+                        <header class="title"> Nome do dashboard <i class="more-icon ion-android-more-vertical"></i></header>
+
+                    
+                   </div>
+                </div>
+            
+                <div class="col-md-5 col-sm-10 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="box">
+                        <header class="title"> Nome do dashboard <i class="more-icon ion-android-more-vertical"></i></header>
+                     
+                    </div>
+                 </div>
+            
+      
+
+            </div>
+        </div>
+
+    </section>
 
 </body>
+
+<div id="preloader"></div>
 </html>
