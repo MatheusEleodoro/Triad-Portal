@@ -14,6 +14,10 @@ new WOW().init(); //Inicializando a WON
 function togglePopup(){
     document.getElementById("popup-1").classList.toggle("active");
 }
+
+function toggleMenu(){
+  document.getElementById("menu-box").classList.toggle("active");
+}
 var enableShow = false;
 
 function showPassword() {

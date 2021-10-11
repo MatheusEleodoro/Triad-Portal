@@ -26,7 +26,7 @@
 <script src="../js/graficos.js"></script>
 
 <!-- Bootstrap-->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet"/>
 <!-- Libraries CSS Files -->
 <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 <link href="../lib/animate/animate.min.css" rel="stylesheet">
@@ -42,9 +42,8 @@
 
     <header>
             <div id="header"class="header" alt="" width="100%">
-
                 <div id="header-container"class="container-fluid">
-                    <i class="icon-menu ion-navicon"></i>
+                    <i class="icon-menu ion-navicon"data-toggle="modal" data-target="#exampleModal"></i></i>
                     <div class="logos">
                         <a href="#" class="logo"><img src="../img/logo.png" alt="" width="130" height="55" />  </a>
                         <div class="Rectangle"></div>
@@ -132,6 +131,15 @@
                 <div class="col-md-4 col-sm-10 wow fadeInLeft">
                    <div class="box">
                         <header class="title"> Nome do dashboard <i class="more-icon ion-android-more-vertical"></i></header>
+                        <div id="periodo-seletor">
+                            <form>
+                                <div>
+                                  <label for="festa">Periodo</label><br>
+                                  <input type="datetime-local" id="Periodo" name="festa" min="2021-01-01" required >
+                                  <span class="validity"></span>
+                                </div>
+                              </form>
+                        </div>
                         <div class="box-content">
                             <div id="donutchart" style="height: 400px;"></div>
                         </div>
@@ -141,6 +149,15 @@
                 <div class="col-md-4 col-sm-10 box-col wow fadeInUp" data-wow-delay="0.2s">
                     <div class="box">
                         <header class="title"> Nome do dashboard <i class="more-icon ion-android-more-vertical"></i></header>
+                        <div id="periodo-seletor">
+                            <form>
+                                <div>
+                                  <label for="festa">Periodo</label><br>
+                                  <input type="datetime-local" id="Periodo" name="festa" min="2021-01-01" required >
+                                  <span class="validity"></span>
+                                </div>
+                              </form>
+                        </div>
                         <div class="box-content">
                             <div id="chart_bar" style="height: 400px; padding: 30px;"></div>
                         </div>
@@ -155,18 +172,41 @@
 
             </div>
 
-            <div class="row justify-content-around box-row wow fadeInUp"data-wow-delay="0.4s">
-                <div class="col-md-5 col-sm-10">
+            <div class="row justify-content-around box-row">
+                <div class="col-md-5 col-sm-10 wow fadeInUp" data-wow-delay="0.4s">
                    <div class="box">
-                        <header class="title"> Nome do dashboard <i class="more-icon ion-android-more-vertical"></i></header>
-
-                    
+                        <header class="title"> Nome do dashboard <i class="more-icon ion-android-more-vertical"></i></header>   
+                        <div id="periodo-seletor">
+                            <form>
+                                <div>
+                                  <label for="festa">Periodo</label><br>
+                                  <input type="datetime-local" id="Periodo" name="festa" min="2021-01-01" required >
+                                  <span class="validity"></span>
+                                </div>
+                              </form>
+                        </div>
+                        <div class="box-content">
+                            <div id="chart_bar2" style="height: 400px; padding: 30px;"></div>
+                        </div>
                    </div>
                 </div>
             
                 <div class="col-md-5 col-sm-10 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="box">
                         <header class="title"> Nome do dashboard <i class="more-icon ion-android-more-vertical"></i></header>
+
+                        <div id="periodo-seletor">
+                            <form>
+                                <div>
+                                  <label for="festa">Periodo</label><br>
+                                  <input type="datetime-local" id="Periodo" name="festa" min="2021-01-01" required >
+                                  <span class="validity"></span>
+                                </div>
+                              </form>
+                        </div>
+                        <div class="box-content">
+                            <div id="chart_bar3" style="height: 400px; padding: 30px;"></div>
+                        </div>
                      
                     </div>
                  </div>
@@ -176,6 +216,12 @@
             </div>
         </div>
 
+    </section>
+
+
+    <section id="menu">
+        
+      
     </section>
 
 </body>
