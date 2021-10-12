@@ -17,9 +17,11 @@ body  {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+
 body::-webkit-scrollbar{
   display: none;
 }
+
 body::after {
     content: "";
     background: rgb(0, 0, 0);
@@ -144,13 +146,12 @@ body::after {
 
 
 .header-expand{
-  display: none;
   background-color: rgb(97,97,97);
   width: auto;
-  height: 40px;
+  height: 0;
   align-items: center;
-  padding-left: 8%;
-  padding-top: 8px;
+  overflow-y: hidden;
+  transition: 0.5s;
 }
 
 
@@ -164,7 +165,7 @@ body::after {
   border-radius: 12px;
   width: auto;
   height: 24px;
-  padding:  8px,0,0,8px;
+  margin: 10px 155px  ;
   background-color: var(--primary-color);
 }
 
@@ -569,50 +570,86 @@ label:active:after {
 
 /*MENU*/
 
-.modal.left .modal-dialog {
-	position:fixed;
-	right: 0;
-	margin: auto;
-	width: 320px;
-	height: 100%;
-	-webkit-transform: translate3d(0%, 0, 0);
-	-ms-transform: translate3d(0%, 0, 0);
-	-o-transform: translate3d(0%, 0, 0);
-	transform: translate3d(0%, 0, 0);
+#menu-box .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  opacity: 0.9;
 }
 
-.modal.left .modal-content {
-	height: 100%;
-	overflow-y: auto;
+#menu-box .sidebar a {
+  cursor: pointer;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
 
-.modal.right .modal-body {
-	padding: 15px 15px 80px;
+#menu-box .sidebar a:hover {
+  color: #f1f1f1;
 }
 
-.modal.right.fade .modal-dialog {
-	left: -320px;
-	-webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
-	-moz-transition: opacity 0.3s linear, left 0.3s ease-out;
-	-o-transition: opacity 0.3s linear, left 0.3s ease-out;
-	transition: opacity 0.3s linear, left 0.3s ease-out;
+#menu-box .sidebar .closebtn {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #fff;
 }
 
-.modal.right.fade.show .modal-dialog {
-	right: 0;
+#menu-box .openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
 }
 
-/* ----- MODAL STYLE ----- */
-.modal-content {
-	border-radius: 0;
-	border: none;
+#menu-box .openbtn:hover {
+  background-color: #444;
+}
+#menu-box .sidebar #title{
+  padding: 0px 0px 0px 32px;
+  margin-top: 1px;
+  border-radius: 5px;
+  background-image: linear-gradient(79deg, #f7b733 16%, #fc691b 98%);
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+#menu-box .sidebar p{
+ margin-top: 15px;
+ text-align: left;
+ font-family:'Oxygen',sans-serif;
+ font-size: 22px;
+ color: #fff;
+ font-style: bold;
+ font-stretch: ultra-condensed;
 }
 
-.modal-header {
-	border-bottom-color: #eeeeee;
-	background-color: #fafafa;
+
+#body {
+  transition: margin-left .5s;
 }
 
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
 
 
 

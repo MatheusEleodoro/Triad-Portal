@@ -33,17 +33,17 @@
 <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
 <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 <!-- Main Stylesheet File -->
-<link href="../css/styleHome.css" rel="stylesheet">
+<link href="../css/styleHome.css" rel="stylesheet" id="styleHome">
 
 
 </head>
 
-<body>
+<body id="body">
 
     <header>
             <div id="header"class="header" alt="" width="100%">
                 <div id="header-container"class="container-fluid">
-                    <i class="icon-menu ion-navicon"data-toggle="modal" data-target="#exampleModal"></i></i>
+                    <i class="icon-menu ion-navicon"onclick="menuShow()"></i>
                     <div class="logos">
                         <a href="#" class="logo"><img src="../img/logo.png" alt="" width="130" height="55" />  </a>
                         <div class="Rectangle"></div>
@@ -111,9 +111,9 @@
             </div>
 
 
-            <div id= "header-expand" class="header-expand" alt="" width="100%" style="display: none">
+            <div id= "header-expand" class="header-expand">
                 <button class="pages-button">
-                    <p>Home Screen
+                    <p>Home
                         <i class="ion-close-circled"></i>
                     </p>
                 <button>
@@ -128,7 +128,7 @@
 
 
             <div class="row justify-content-center box-row">
-                <div class="col-md-4 col-sm-10 wow fadeInLeft">
+                <div class="col-md-4 wow fadeInLeft">
                    <div class="box">
                         <header class="title"> Nome do dashboard <i class="more-icon ion-android-more-vertical"></i></header>
                         <div id="periodo-seletor">
@@ -146,7 +146,7 @@
                    </div>
                 </div>
             
-                <div class="col-md-4 col-sm-10 box-col wow fadeInUp" data-wow-delay="0.2s">
+                <div class="col-md-4  box-col wow fadeInUp" data-wow-delay="0.2s">
                     <div class="box">
                         <header class="title"> Nome do dashboard <i class="more-icon ion-android-more-vertical"></i></header>
                         <div id="periodo-seletor">
@@ -164,7 +164,7 @@
                     </div>
                  </div>
             
-                <div class="col-md-3 col-sm-10 box-col wow fadeInRight"data-wow-delay="0.3s">
+                <div class="col-md-3  box-col wow fadeInRight"data-wow-delay="0.3s">
                     <div class="box-fav">
                         <header class="title-fav"> Nome do dashboard <i class="more-icon ion-android-more-vertical"></i></header>
                     </div>
@@ -173,7 +173,7 @@
             </div>
 
             <div class="row justify-content-around box-row">
-                <div class="col-md-5 col-sm-10 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="col-md-5 wow fadeInUp" data-wow-delay="0.4s">
                    <div class="box">
                         <header class="title"> Nome do dashboard <i class="more-icon ion-android-more-vertical"></i></header>   
                         <div id="periodo-seletor">
@@ -191,7 +191,7 @@
                    </div>
                 </div>
             
-                <div class="col-md-5 col-sm-10 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-md-5  wow fadeInUp" data-wow-delay="0.5s">
                     <div class="box">
                         <header class="title"> Nome do dashboard <i class="more-icon ion-android-more-vertical"></i></header>
 
@@ -218,13 +218,32 @@
 
     </section>
 
+   
 
-    <section id="menu">
+    <section id="menu-box">
+        <style>
+            .unselectable {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+             -moz-user-select: none;
+             -ms-user-select: none;
+             user-select: none;
+}
+        </style>
+        <div id="sidebar" class="sidebar">
+            <header id="title">
+                <p class="unselectable">MENU</p>
+                <a class="closebtn" onclick="menuShow()">×</a>
+            </header>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+          </div>
         
-      
     </section>
-
+    
 </body>
-
 <div id="preloader"></div>
 </html>

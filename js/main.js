@@ -1,4 +1,5 @@
-
+var enableShow = false;
+var menuCollapsed = true;
 new WOW().init(); //Inicializando a WON
 
  // Preloader
@@ -14,11 +15,6 @@ new WOW().init(); //Inicializando a WON
 function togglePopup(){
     document.getElementById("popup-1").classList.toggle("active");
 }
-
-function toggleMenu(){
-  document.getElementById("menu-box").classList.toggle("active");
-}
-var enableShow = false;
 
 function showPassword() {
     var fieldPassword = document.getElementById("password");
@@ -40,13 +36,23 @@ function showPassword() {
 
         var label = document.getElementById("header-expand");
         if(cb.checked)
-            label.style.display = "block";
+            label.style.height = "43px";
         else
-            label.style.display = "none";
+            label.style.height = "0";
 
     }, 0);
   }
-
+  function menuShow() {
+    if(menuCollapsed){
+      document.getElementById("sidebar").style.width = "250px";
+      document.getElementById("body").style.marginLeft = "250px";
+      menuCollapsed = false;
+    }else{
+      document.getElementById("sidebar").style.width = "0";
+      document.getElementById("body").style.marginLeft= "0";
+      menuCollapsed = true;
+    }
+  }
 
   function fullScreen() {
 	 
@@ -73,8 +79,6 @@ function showPassword() {
       }
     }
 }
-
-
 
 
   $(document).on('dblclick', 'input[list]', function(event){
